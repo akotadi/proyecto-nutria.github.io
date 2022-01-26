@@ -1,50 +1,33 @@
 {
-  "name": "yaos",
-  "version": "0.1.0",
+  "name": "proyecto-nutria.github.io",
   "private": true,
-  "homepage": "https://proyecto-nutria.github.io/",
-  "dependencies": {
-    "@apollo/client": "^3.2.5",
-    "@auth0/auth0-react": "^1.2.0",
-    "@date-io/moment": "1.x",
-    "@material-ui/core": "^4.11.3",
-    "@material-ui/icons": "^4.9.1",
-    "@material-ui/lab": "^4.0.0-alpha.58",
-    "@material-ui/pickers": "^3.3.10",
-    "@types/i18next": "^13.0.0",
-    "@types/node": "^12.0.0",
-    "@types/react": "^17.0.0",
-    "@types/react-anchor-link-smooth-scroll": "^1.0.1",
-    "@types/react-dom": "^17.0.0",
-    "@types/react-router-dom": "^5.1.5",
-    "@types/react-scrollspy": "^3.3.3",
-    "@types/react-slick": "^0.23.4",
-    "graphql": "^15.3.0",
-    "husky": "^7.0.0",
-    "i18next": "^19.8.7",
-    "i18next-browser-languagedetector": "^6.0.1",
-    "i18next-http-backend": "^1.1.0",
-    "lint-staged": "^11.0.0",
-    "moment": "^2.29.1",
-    "prettier": "^2.3.2",
-    "react": "^17.0.2",
-    "react-anchor-link-smooth-scroll": "^1.0.12",
-    "react-animated-slider": "^2.0.0",
-    "react-dom": "^17.0.2",
-    "react-i18next": "^11.8.5",
-    "react-router": "^5.2.0",
-    "react-router-dom": "^5.2.0",
-    "react-scripts": "4.0.3",
-    "react-scrollspy": "^3.4.3",
-    "react-slick": "^0.28.0",
-    "typescript": "^4.1.2",
-    "web-vitals": "^1.0.1"
-  },
+  "version": "2.0.0",
+  "homepage": "https://proyectonutria.com/",
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "format": "eslint '*/**/*.{js,ts,tsx}' --fix"
+  },
+  "dependencies": {
+    "next": "12.0.8",
+    "react": "17.0.2",
+    "react-dom": "17.0.2"
+  },
+  "devDependencies": {
+    "@types/node": "17.0.12",
+    "@types/react": "17.0.38",
+    "@typescript-eslint/eslint-plugin": "^5.10.1",
+    "@typescript-eslint/parser": "^5.10.1",
+    "eslint": "8.7.0",
+    "eslint-config-next": "12.0.8",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-prettier": "^4.0.0",
+    "eslint-plugin-react": "^7.28.0",
+    "husky": "^7.0.4",
+    "prettier": "^2.5.1",
+    "typescript": "4.5.5"
   },
   "eslintConfig": {
     "extends": [
@@ -65,13 +48,8 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "lint-staged"
+      "pre-commit": "$npm_execpath run format && $npm_execpath run lint"
     }
-  },
-  "lint-staged": {
-    "src/**/*.{js,jsx,ts,tsx,json,css,scss,md}": [
-      "prettier --write"
-    ]
   },
   "engines": {
     "node": ">=14.10.0"

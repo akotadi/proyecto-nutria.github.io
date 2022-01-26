@@ -1,13 +1,14 @@
 {
-  "trailingComma": "es5",
-  "tabWidth": 2,
   "semi": true,
-  "jsx-bracket-same-line": true,
-  "jsx-single-quote": true,
+  "trailingComma": "es5",
   "singleQuote": true,
   "printWidth": 80,
+  "tabWidth": 2,
+  "jsxSingleQuote": true,
   "arrowParens": "avoid",
-  "object-property-newline": "allowAllPropertiesOnSameLine",
+  "objectPropertyNewline": "allowAllPropertiesOnSameLine",
+  "endOfLine": "auto",
+  "bracketSameLine": false,
   "[typescript]": { "editor.defaultFormatter": "esbenp.prettier-vscode" },
   "[typescriptreact]": { "editor.defaultFormatter": "esbenp.prettier-vscode" }
 }
