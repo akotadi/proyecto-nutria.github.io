@@ -2,88 +2,62 @@
   "compilerOptions": {
     "target": "esnext",
     "module": "esnext",
-    "jsx": "preserve",
-    "lib": [
-      "dom",
-      "dom.iterable",
-      "esnext"
-    ],
-    "baseUrl": ".",
     "moduleResolution": "node",
+    "jsx": "preserve",
+    "lib": ["dom", "dom.iterable", "esnext"],
     "strict": true,
-    "allowJs": true,
+    "alwaysStrict": true,
+    "strictNullChecks": true,
+    "noUncheckedIndexedAccess": true,
+    "allowJs": false,
     "noEmit": true,
     "allowSyntheticDefaultImports": true,
     "esModuleInterop": true,
     "skipLibCheck": true,
+    "noImplicitThis": true,
     "noUnusedLocals": true,
     "noUnusedParameters": true,
+    "allowUnreachableCode": false,
+    "noFallthroughCasesInSwitch": true,
     "isolatedModules": true,
     "removeComments": false,
     "preserveConstEnums": true,
     "sourceMap": true,
     "forceConsistentCasingInFileNames": true,
     "resolveJsonModule": true,
-    "alwaysStrict": true,
-    "noFallthroughCasesInSwitch": true,
+    "baseUrl": ".",
+    "outDir": "out",
+    "declaration": true,
     "paths": {
-      "@assets/*": [
-        "assets/*"
-      ],
-      "@components/*": [
-        "components/*"
-      ],
-      "@hooks/*": [
-        "hooks/*"
-      ],
-      "@i18n/*": [
-        "i18n/*"
-      ],
-      "@lib/*": [
-        "lib/*"
-      ],
-      "@pages/*": [
-        "pages/*"
-      ],
-      "@providers/*": [
-        "providers/*"
-      ],
-      "@public/*": [
-        "public/*"
-      ],
-      "@screens/*": [
-        "screens/*"
-      ],
-      "@styles/*": [
-        "styles/*"
-      ],
-      "@utils/*": [
-        "utils/*"
-      ]
+      "@assets/*": ["src/assets/*"],
+      "@components/*": ["src/components/*"],
+      "@hooks/*": ["src/hooks/*"],
+      "@i18n/*": ["src/i18n/*"],
+      "@lib/*": ["src/lib/*"],
+      "@pages/*": ["src/pages/*"],
+      "@providers/*": ["src/providers/*"],
+      "@public/*": ["public/*"],
+      "@screens/*": ["src/screens/*"],
+      "@styles/*": ["src/styles/*"],
+      "@utils/*": ["src/utils/*"]
     },
     "incremental": true
   },
-  "exclude": [
-    "dist",
-    ".next",
-    "out",
-    "next.config.js",
-    "node_modules"
-  ],
+  "exclude": ["dist", ".next", "out", "next.config.js", "node_modules"],
   "include": [
     "next-env.d.ts",
-    "assets/**/*.ts",
-    "components/**/*.ts",
-    "components/**/*.tsx",
-    "hooks/**/*.ts",
-    "i18n/**/*.ts",
-    "lib/**/*.ts",
-    "pages/**/*.ts",
-    "pages/**/*.tsx",
-    "providers/**/*.tsx",
-    "screens/**/*.ts",
-    "screens/**/*.tsx",
-    "utils/**/*.ts",
-    "utils/**/*.tsx"
+    "src/assets/**/*.ts",
+    "src/components/**/*.ts",
+    "src/components/**/*.tsx",
+    "src/hooks/**/*.ts",
+    "src/i18n/**/*.ts",
+    "src/lib/**/*.ts",
+    "src/pages/**/*.ts",
+    "src/pages/**/*.tsx",
+    "src/providers/**/*.tsx",
+    "src/screens/**/*.ts",
+    "src/screens/**/*.tsx",
+    "src/utils/**/*.ts",
+    "src/utils/**/*.tsx"
   ]
 }
